@@ -2,11 +2,18 @@
 
 include_once('conexao.php');
 
-$sqlQuery = 'CREATE TABLE IF NOT EXISTS usuario_neto (cod_usuario INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(250), email VARCHAR(250))';
+$executa = $conn->prepare('SELECT * FROM usuario_igor');
 
-$exec = $conn->prepare($sqlQuery);
+$executa->execute();
 
-$exec->execute();
+$resultado = $executa->fetchAll(PDO::FETCH_OBJ);
+
+
+echo '<pre>';
+
+var_dump($resultado);
+
+echo '</pre>';
 
 
 ?>
