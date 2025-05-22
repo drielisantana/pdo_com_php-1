@@ -6,14 +6,14 @@ $executa = $conn->prepare('SELECT * FROM usuario_igor');
 
 $executa->execute();
 
-$resultado = $executa->fetchAll(PDO::FETCH_OBJ);
+$resultados = $executa->fetchAll(PDO::FETCH_OBJ);
 
+foreach($resultados as $resultado) {
 
-echo '<pre>';
+    echo $resultado->nome . '<br />';
 
-var_dump($resultado);
+}
 
-echo '</pre>';
 
 
 ?>
