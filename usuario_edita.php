@@ -16,7 +16,7 @@
     <style>
         .jumbotron {
             width: 900px;
-            margin: 20px auto;
+            margin: 30px auto;
         }
     </style>
 </head>
@@ -26,7 +26,7 @@
 include_once('conexao.php');
 
 
-sql = "SELECT * FROM usuario_igor WHERE status LIKE 1";
+sql = "SELECT * FROM usuario_andrieli WHERE status LIKE 1";
 
 $executa = $conn->prepare($sql);
 
@@ -44,8 +44,8 @@ $resultados = $executa->fetchAll(PDO::FETCH_OBJ);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="http://192.168.1.35/TRILHAS4/igormoura/pdo_com_php/">Home<span class="sr-only">(Página atual)</span></a>
-                        <a class="nav-item nav-link" href="http://192.168.1.35/TRILHAS4/igormoura/pdo_com_php/usuarios.php">Usuários</a>
+                        <a class="nav-item nav-link active" href="http://192.168.1.35/TRILHAS4/Andrieli/pdo_com_php/">Home<span class="sr-only">(Página atual)</span></a>
+                        <a class="nav-item nav-link" href="http://192.168.1.35/TRILHAS4/Andrieli/pdo_com_php/usuarios.php">Usuários</a>
                         <a class="nav-item nav-link disabled" href="#">Preços</a>
                         <a class="nav-item nav-link disabled" href="#">Desativado</a>
                     </div>

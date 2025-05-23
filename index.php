@@ -2,7 +2,7 @@
 
 include_once('conexao.php');
 
-$executa = $conn->prepare('SELECT * FROM usuario_igor');
+$executa = $conn->prepare('SELECT * FROM usuario_Andrieli');
 
 $executa->execute();
 

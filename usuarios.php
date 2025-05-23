@@ -25,7 +25,7 @@
 
 include_once('conexao.php');
 
-$sql = "SELECT * FROM usuario_igor WHERE status LIKE 1";
+$sql = "SELECT * FROM usuario_andrieli WHERE status LIKE 1";
 
 $executa = $conn->prepare($sql);
 
@@ -45,8 +45,8 @@ $resultados = $executa->fetchAll(PDO::FETCH_OBJ);
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="http://192.168.1.35/TRILHAS4/igormoura/pdo_com_php/">Home<span class="sr-only">(Página atual)</span></a>
-                        <a class="nav-item nav-link" href="http://192.168.1.35/TRILHAS4/igormoura/pdo_com_php/usuarios.php">Usuários</a>
+                        <a class="nav-item nav-link active" href="http://192.168.1.35/TRILHAS4/Andrieli/pdo_com_php/">Home<span class="sr-only">(Página atual)</span></a>
+                        <a class="nav-item nav-link" href="http://192.168.1.35/TRILHAS4/Andrieli/pdo_com_php/usuarios.php">Usuários</a>
                         <a class="nav-item nav-link disabled" href="#">Preços</a>
                         <a class="nav-item nav-link disabled" href="#">Desativado</a>
                     </div>
@@ -83,9 +83,9 @@ $resultados = $executa->fetchAll(PDO::FETCH_OBJ);
                                 echo "<td>$resultado->email</td>";
                                 echo "<td>$resultado->senha</td>";
                                 echo    '<td class="d-flex flex-row justify-content-around">
-                                            <a href="http://192.168.1.35/TRILHAS4/igormoura/pdo_com_php/usuario_edita.php?id=' . $resultado->cod_usuario . '" class="text-warnig"><i class="far fa-edit"></i></a>
+                                            <a href="http://192.168.1.35/TRILHAS4/Andrieli/pdo_com_php/usuario_edita.php?id=' . $resultado->cod_usuario . '" class="text-warnig"><i class="far fa-edit"></i></a>
 
-                                            <a href="http://192.168.1.35/TRILHAS4/igormoura/pdo_com_php/alterastatus.php?id=' . $resultado->cod_usuario . '" class="text-danger"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="http://192.168.1.35/TRILHAS4/Andrieli/pdo_com_php/alterastatus.php?id=' . $resultado->cod_usuario . '" class="text-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>';
                             echo '</tr>';
 
